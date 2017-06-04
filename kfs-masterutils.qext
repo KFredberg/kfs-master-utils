@@ -1,0 +1,8 @@
+{
+	"name" : "Master Utils",
+	"description" : "Master items utility extension for Qlik Sense. Compatible with Goverened Metric Service",
+	"icon" : "extension",
+	"type" : "visualization",
+	"version": "0.0.1",
+	"author": "Karl Fredberg Sjöstrand"
+}

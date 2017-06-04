@@ -1,0 +1,46 @@
+.qv-object-kfs-masterutils button.warning-on-hover:hover {
+  color: white;
+  background-color: #f05555;
+  border: 0;
+  padding: 1px 17px;
+  box-shadow: inset 0 -2px rgba(0, 0, 0, 0.1), inset 0 0 0 250px rgba(255, 255, 255, 0.2);
+  border: 0px;
+}
+.qv-object-kfs-masterutils button.primary-on-hover:hover {
+  color: white;
+  background-color: #337ab7;
+  border: 0;
+  padding: 1px 17px;
+  box-shadow: inset 0 -2px rgba(0, 0, 0, 0.1), inset 0 0 0 250px rgba(255, 255, 255, 0.2);
+}
+.qv-object-kfs-masterutils button.success-on-hover:hover {
+  color: white;
+  background-color: #61a729;
+  border: 0;
+  padding: 1px 17px;
+  box-shadow: inset 0 -2px rgba(0, 0, 0, 0.1), inset 0 0 0 250px rgba(255, 255, 255, 0.2);
+  border: 0px;
+}
+.qv-object-kfs-masterutils .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.qv-object-kfs-masterutils .inputfile + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
+.qv-object-kfs-masterutils .inputfile:focus + label,
+.qv-object-kfs-masterutils .inputfile + label:hover {
+  background-color: red;
+}
+.qv-object-kfs-masterutils .inputfile + label {
+  cursor: pointer;
+  /* "hand" cursor */
+}

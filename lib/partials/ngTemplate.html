@@ -1,0 +1,7 @@
+<lui-button title="Update master items" class="success-on-hover" ng-click="updateMasterItems()"><span class="lui-icon lui-icon--library"></span> Update master items</lui-button>
+<lui-button title="Export master items to CSV" class="primary-on-hover" ng-click="exportMasterItemsToCsv()"><span class="lui-icon lui-icon--export"></span> Export master items</lui-button>
+<lui-button title="Delete dimensions & measures" class="warning-on-hover" ng-click="deleteDimensionsAndMeasures()"><span class="lui-icon lui-icon--remove"></span> Delete dimensions & measures</lui-button>
+<div>Paste exported CSV content here</div>
+<textarea type="text" class="simple-textarea lui-textarea ng-pristine ng-valid ng-empty ng-valid-maxlength ng-touched" 
+placeholder="{{importTextareaPlaceholder}}" ng-model="importTextarea" style="width:100%; height:200px">		</textarea>
+<lui-button ng-disabled="!inputIsValid()" title="Import" class="success-on-hover" ng-click="importToMasterLibrary()">Import</lui-button >
