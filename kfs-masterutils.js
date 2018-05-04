@@ -74,7 +74,8 @@ define(
                 qType: 'measure'
               },
               qMeasure: {
-                qLabel: row[5].qText,
+                qLabel: row[2].qText,
+                qLabelExpression: row[5].qText,
                 qDef: row[3].qText,
                 qGrouping: row[6].qText,
                 qExpressions: [],
@@ -118,6 +119,7 @@ define(
                 qType: 'dimension'
               },
               qDim: {
+                qLabelExpression: row[5].qText,
                 qGrouping: row[6].qText,
                 qFieldDefs: row[6].qText === 'H'
                   ? row[3].qText.split(',')
@@ -425,6 +427,7 @@ define(
                             qExpression: properties.qDim.qFieldDefs.join(','),
                             qDescription: properties.qMetaDef.description,
                             qLabel: properties.qDim.qFieldLabels[0],                            
+                            qLabelExpression: properties.qDim.qLabelExpression,
                             qGrouping: properties.qDim.qGrouping,
                             qTags: properties.qMetaDef.tags
                               ? properties.qMetaDef.tags.join(',')
@@ -453,6 +456,7 @@ define(
                               qExpression: properties.qMeasure.qDef,
                               qDescription: properties.qMetaDef.description,
                               qLabel: properties.qMeasure.qLabel,                              
+                              qLabelExpression: properties.qMeasure.qLabelExpression,
                               qGrouping: properties.qMeasure.qGrouping,
                               qTags: properties.qMetaDef.tags
                                 ? properties.qMetaDef.tags.join(',')
@@ -493,7 +497,7 @@ define(
                         qName: properties.qMetaDef.title,
                         qExpression: properties.qDim.qFieldDefs.join(','),
                         qDescription: properties.qMetaDef.description,
-                        qLabel: properties.qDim.qFieldLabels[0],
+                        qLabel: properties.qDim.qLabelExpression,
                         qTags: properties.qMetaDef.tags
                           ? properties.qMetaDef.tags.join(',')
                           : '',
@@ -539,7 +543,7 @@ define(
                         qName: properties.qMetaDef.title,
                         qExpression: properties.qMeasure.qDef,
                         qDescription: properties.qMetaDef.description,
-                        qLabel: properties.qMeasure.qLabel,
+                        qLabel: properties.qMeasure.qLabelExpression,
                         qTags: properties.qMetaDef.tags
                           ? properties.qMetaDef.tags.join(',')
                           : '',
